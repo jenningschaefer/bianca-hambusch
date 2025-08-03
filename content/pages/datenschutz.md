@@ -1,43 +1,14 @@
 ---
-title: Style your typography quickly
-content: >-
-  # h1
-
-
-  ## h2
-
-
-  ### h3
-
-
-  #### h4
-
-
-  ##### h5
-
-
-  ###### h6
-
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id tincidunt magna, ut dapibus lectus. Mauris ultricies sed ipsum vel tempus. Sed eget libero ac purus ornare semper eget ac leo. Aliquam eu leo id nisl dignissim convallis non a massa. Aenean venenatis vestibulum sem id vulputate. Suspendisse potenti. Nulla malesuada eget ante eu tempor. Suspendisse non mauris molestie felis suscipit efficitur.
-
-
-  Integer et lorem id velit congue condimentum id porta lorem. Sed ipsum leo, hendrerit nec sagittis sit amet, ornare eu metus. Maecenas vel sem eget nibh cursus pharetra. Morbi at elit nec nisl mattis facilisis. Etiam efficitur turpis quis condimentum lobortis. Morbi et viverra dolor, id blandit turpis. Sed elementum accumsan molestie. Sed ante purus, feugiat vel purus id, convallis tempus mi. Integer lectus metus, ultrices non sapien nec, suscipit pretium purus. 
-
-
-  A list
-
-
-  * i
-
-  * are
-
-  * a
-
-  * list
+title: Datenschutz
+description: Or am i? Or am i just a ghost in a shell?
+content: Who is to know, only thing i know for sure is that you are reading
+  this. Who you is however, is a whole other story. Are you I? Is I you? Are
+  you you or are we in fact one and the same connected by a interweb of pizza,
+  coffee, mycelium and uncommon brain patternns?
+image: /sheep.jpg
 SEOmetaData:
   metaImage: https://bianca-hambusch.de/images/logos/logo.svg
-  metaDescription: Datenschutz
-  metaTitle: Datenschutz | Bianca Hambusch
-  keywords: bianca hambusch datenschutz
+  metaDescription: About Bianca Hambusch
+  metaTitle: About Me | Bianca Hambusch
+  keywords: bianca hambusch
 ---

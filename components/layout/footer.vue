@@ -15,7 +15,7 @@
 						<NuxtLink to="/about">About Me</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/">Blog</NuxtLink>
+						<NuxtLink to="/blog">Blog</NuxtLink>
 					</li>
 					<li>
 						<NuxtLink to="/contact">Contact</NuxtLink>

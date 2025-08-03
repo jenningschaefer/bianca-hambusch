@@ -92,15 +92,15 @@ collections:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
           - *seo
-      - name: "Datenschutz"
-        label: "Datenschutz"
+      - name: "datenschutz"
+        label: "datenschutz"
         file: "content/pages/datenschutz.md"
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
           - *seo
-      - name: "Impressum"
-        label: "Impressum"
+      - name: "impressum"
+        label: "impressum"
         file: "content/pages/impressum.md"
         fields:
           - { name: "title", label: "Title", widget: "string" }
