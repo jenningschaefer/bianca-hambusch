@@ -13,6 +13,7 @@
 			<FormsComponentsInputTextarea @payload="validateInput" :rows="5" name="message" inputID="message"
 				label="your message:" required></FormsComponentsInputTextarea>
 		</fieldset>
+		<!-- <Button type="submit" :class="submitActive ? 'enabled' : 'disabled'">{{ btnSend }}</Button> -->
 		<button type="submit" :class="submitActive ? 'enabled' : 'disabled'">{{ btnSend }}</button>
 	</form>
 </template>
@@ -81,6 +82,12 @@ button {
 	margin-inline: auto;
 	margin-block: $spacing3;
 	background: $base-color;
+	color: $white;
+	padding: .5em 3em;
+	@include hover {
+		background: $secondary-color;
+		color: rgba($color: $white, $alpha: 0.9);
+	}
 }
 
 </style>
