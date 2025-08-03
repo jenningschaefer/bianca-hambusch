@@ -19,7 +19,7 @@
 		width: 100%;
 		height: 0.1em;
 		top: 100%;
-		background-image: linear-gradient(90deg, $base-color, $secondary-color);
+		background-image: rgba($white, 0.1);
 	}
 	@include media(xsm) {
 		display: block;
