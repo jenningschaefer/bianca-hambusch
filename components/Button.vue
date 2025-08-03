@@ -25,7 +25,7 @@
 
 	$btn--bgColor: $black;
 	$btn--color: $white;
-	$btn--padding: 0.5em 1em;
+	$btn--padding: .5em 3em;
 	.button {
 		$button-padding: 0.4em 1.2em;
 		position: relative;
@@ -37,9 +37,10 @@
 		color: $btn--color;
 		font-family: $font-accent;
 		font-size: $font-size6;
-		font-weight: bold;
+		//font-weight: bold;
 		text-decoration: none;
 		text-transform: lowercase;
+		color: $white;
 		cursor: pointer;
 		height: max-content;
 		height: auto;
