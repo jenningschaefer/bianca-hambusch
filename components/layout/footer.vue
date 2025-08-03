@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<div id="footer">
+		<div class="footer">
 			<div>
 				<NuxtLink to="/">
 					<img src="/images/logos/logo.svg" alt="logo" class="logo" />
@@ -41,7 +41,7 @@
 </template>
 
 <style lang="scss" scoped>
-#footer {
+.footer {
 	background-color: $base-color;
 	position: relative;
 	//height: max-content;
