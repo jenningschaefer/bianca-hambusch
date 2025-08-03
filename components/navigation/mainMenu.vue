@@ -9,10 +9,13 @@
 
 			<menu class="main-menu__basic">
 				<NuxtLink to="/" class="menu-item item--home" prefetch>
-					<span>home</span>
+					<span>Home</span>
+				</NuxtLink>
+				<NuxtLink to="/contact" class="menu-item" prefetch>
+					<span>Kontakt</span>
 				</NuxtLink>
 				<NuxtLink to="/typography" class="menu-item" prefetch>
-					<span>typography</span>
+					<span>Typography</span>
 				</NuxtLink>
 			</menu>
 		</nav>
