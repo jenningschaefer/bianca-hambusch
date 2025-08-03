@@ -3,23 +3,14 @@
 		id="header__logo"
 		class="company-logo"
 	>
-		<NuxtLink to="https://nuxt.com" target="_blank">
+		<NuxtLink to="/">
 			<img
-				src="/images/logos/nuxt-logo.svg"
+				src="/images/logos/logo.svg"
 				alt="logo"
 				width="800"
 				height="200"
 			/>
 		</NuxtLink>
-		<NuxtLink to="https://decapcms.org" target="_blank">
-			<img
-				src="/images/logos/decap-logo.svg"
-				alt="logo"
-				width="104"
-				height="30"
-			/>
-		</NuxtLink>
-		<span>Boilerplate</span>
 	</div>
 </template>
 
