@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer class="footer_bg">
 		<div class="footer">
 			<div>
 				<NuxtLink to="/">
@@ -12,19 +12,19 @@
 						<NuxtLink to="/">Home</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/">About Me</NuxtLink>
+						<NuxtLink to="/about">About Me</NuxtLink>
 					</li>
 					<li>
 						<NuxtLink to="/">Blog</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/">Contact</NuxtLink>
+						<NuxtLink to="/contact">Contact</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/">Datenschutz</NuxtLink>
+						<NuxtLink to="/datenschutz">Datenschutz</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/">Impressum</NuxtLink>
+						<NuxtLink to="/impressum">Impressum</NuxtLink>
 					</li>
 				</ul>
 			</div>
@@ -42,6 +42,12 @@
 </template>
 
 <style lang="scss" scoped>
+.footer_bg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $base-color;
+}
 .footer {
 	background-color: $base-color;
 	position: relative;
@@ -52,7 +58,7 @@
 	align-items: center;
 	justify-content: center;
 	opacity: 0;
-	animation: 5s ease 3s forwards appear;
+	animation: 3s ease 1s forwards appear;
 
 	@keyframes appear {
 		0% {

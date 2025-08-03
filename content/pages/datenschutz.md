@@ -35,4 +35,9 @@ content: >-
   * a
 
   * list
+SEOmetaData:
+  metaImage: https://bianca-hambusch.de/images/logos/logo.svg
+  metaDescription: Datenschutz
+  metaTitle: Datenschutz | Bianca Hambusch
+  keywords: bianca hambusch datenschutz
 ---

@@ -69,12 +69,13 @@ collections:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
           - *seo
-      - name: "typography"
-        label: "Typography"
-        file: "content/pages/typography.md"
+      - name: "about"
+        label: "about"
+        file: "content/pages/about.md"
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
+          - *seo
       - name: "Kontakt"
         label: "contact"
         extension: json
@@ -82,9 +83,21 @@ collections:
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
+          - *seo
+      - name: "Datenschutz"
+        label: "Datenschutz"
+        file: "content/pages/datenschutz.md"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
           - *seo
-     
+      - name: "Impressum"
+        label: "Impressum"
+        file: "content/pages/impressum.md"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "content", label: "Content", widget: "markdown" }
+          - *seo
 
           
 
