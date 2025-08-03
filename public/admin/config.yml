@@ -4,12 +4,12 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "public/upload"
 public_folder: "/"
 
-site_url: https://sailsnake-decapcms.netlify.app
+site_url: https://bianca-hambusch.netlify.app
 
 media_library:
   name: cloudinary
@@ -57,6 +57,14 @@ collections:
           - label: "form: send"
             name: "send"
             widget: "string"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
         
   # SINGLE PAGES
   - name: "pages"
