@@ -1,6 +1,6 @@
 <template>
 	<main id="main" class="about">
-		<span>{{ about.title }}</span>
+		<!-- <span>{{ about.title }}</span> -->
 <!-- 		<MiscParseMarkdown :markdownString="about.content" />
 		<MDC :value="about.content" /> -->
 	</main>
