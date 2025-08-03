@@ -1,5 +1,5 @@
 <template>
-	<header id="header">
+	<header id="header" :class="$route.name != 'index' ? 'header--has-bg' : ''">
 		<LayoutLogo />
 		<NavigationMainMenu />
 	</header>
@@ -8,11 +8,13 @@
 
 <style lang="scss" scoped>
 #header {
-	position: relative;
+	position: fixed;
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
 	grid-template-rows: 1fr;
 	padding: $spacing2;
+	z-index: 10;
 	&::before {
 		position: absolute;
 		content: "";
@@ -42,4 +44,9 @@
 	align-self: center;
 	justify-self: center;
 }
+
+.header--has-bg {
+	background-color: rgba($white, 0.8);
+}
+
 </style>

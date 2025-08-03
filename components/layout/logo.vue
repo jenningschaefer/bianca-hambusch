@@ -22,7 +22,6 @@
 		padding-bottom: 3em;
 		padding-right: 1em;
 		width: max-content;
-		border-right: 1px solid $light-grey;
 		img {
 			position: relative;
 			height: 2em;
