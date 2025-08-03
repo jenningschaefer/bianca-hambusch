@@ -63,11 +63,15 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Author", name: "author", widget: "string", default: "Bianca Hambusch", hint: "Author of the blog post" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: false, default: "{{date}}" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Kleingeschriebener URL-Teil, z. B. 'mein-erster-post'" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-        
+      - *seo
+      - { label: "Tags", name: "tags", widget: "list", hint: "Tags are comma separated", required: false, default: "blog" }
   # SINGLE PAGES
   - name: "pages"
     label: "Pages"
