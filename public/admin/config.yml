@@ -7,7 +7,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: "public/upload"
-public_folder: "/"
+public_folder: "/"  
 
 site_url: https://bianca-hambusch.netlify.app
 
@@ -15,8 +15,8 @@ media_library:
   name: cloudinary
   # output_filename_only: true
   config:
-    cloud_name: <YOUR_CLOUD_NAME_HERE>
-    api_key: <YOUR_API_KEY_HERE> 
+    cloud_name: dpkzi7ze1
+    api_key: 838121396738531
 
 
 # SEO anchor:
@@ -27,8 +27,8 @@ seo: &seo
   collapsed: true
   fields: 
     - { name: "metaTitle", label: "SEO Title", widget: "string", default: "{{ title }}", required: true }
-    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
-    - { name: "metaImage", label: "SEO image", widget: "image"}
+    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{10,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
+    - { name: "metaImage", label: "SEO image", widget: "image", default: "/images/logos/logo-hero.svg", hint: "image for social media sharing" }
     - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
 
 
