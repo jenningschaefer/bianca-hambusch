@@ -38,6 +38,7 @@
 			</div>
 		</div>
 	</footer>
+	<div id="__by-sailsnake"></div>
 </template>
 
 <style lang="scss" scoped>
