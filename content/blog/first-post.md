@@ -1,8 +1,14 @@
 ---
+author: Bianca Hambusch
 title: My First Blog Post
 date: 2025-08-03
-description: This is a short summary of the post.
+slug: first-post
 image: /images/posts/bianca.jpg
+description: This is a short summary of the post.
+SEOmetaData:
+  metaTitle: Erster Post
+  metaDescription: this is a first test this is a first test
+  metaImage: https://bianca-hambusch.de/images/logos/logo.svg
 ---
 
 Here is the full content of the blog post written in **Markdown**.
