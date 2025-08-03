@@ -5,8 +5,8 @@
 		<div class="hero-overlay">
 			<img src="/images/logos/logo-hero.svg" alt="logo" class="logo" />
 			<div class="hero-overlay-actions">
-				<NuxtLink to="/"><Button>Blog</Button></NuxtLink>
-				<NuxtLink to="/"><Button>Kontakt</Button></NuxtLink>
+				<NuxtLink to="/blog"><Button>Blog</Button></NuxtLink>
+				<NuxtLink to="/contact"><Button>Kontakt</Button></NuxtLink>
 			</div>
 		</div>
 	</main>
