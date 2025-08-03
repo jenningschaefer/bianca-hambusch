@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="datenschutz" v-if="datenschutz">
     <h1>{{ datenschutz.title }}</h1>
-    <span>{{ datenschutz.content }}</span>
+    <ContentRendererMarkdown :value="datenschutz" />
   </main>
 </template>
 

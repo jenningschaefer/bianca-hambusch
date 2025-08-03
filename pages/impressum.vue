@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="impressum" v-if="impressum">
     <h1>{{ impressum.title }}</h1>
-    <span>{{ impressum.content }}</span>
+    <ContentRendererMarkdown :value="impressum" />
   </main>
 </template>
 
