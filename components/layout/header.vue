@@ -1,5 +1,5 @@
 <template>
-	<header id="header" :class="$route.name != 'index' ? 'header--has-bg' : ''">
+	<header id="header" class="header--has-bg">
 		<LayoutLogo />
 		<NavigationMainMenu />
 		<LayoutLocaleToggle />

@@ -1,112 +1,138 @@
 <template>
-	<footer class="footer_bg">
-		<div class="footer">
-			<div>
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<div class="site-footer__brand">
 				<NuxtLink to="/">
-					<img src="/images/logos/logo.svg" alt="logo" class="logo" />
+					<img src="/images/logos/logo.svg" alt="Bianca Hambusch" class="site-footer__logo" />
 				</NuxtLink>
+				<p class="site-footer__tagline">{{ $t('home.subtitle') }}</p>
 			</div>
-			<div>
-				<ul>
-					<li>
-						<NuxtLink to="/">{{ $t('nav.home') }}</NuxtLink>
-					</li>
-					<li>
-						<NuxtLink to="/about">{{ $t('nav.about') }}</NuxtLink>
-					</li>
-					<!-- Galerie (Instagram) vorerst deaktiviert
-					<li>
-						<NuxtLink to="/blog">{{ $t('nav.gallery') }}</NuxtLink>
-					</li>
-					-->
-					<li>
-						<NuxtLink to="/contact">{{ $t('nav.contact') }}</NuxtLink>
-					</li>
-					<li>
-						<NuxtLink to="/datenschutz">{{ $t('footer.datenschutz') }}</NuxtLink>
-					</li>
-					<li>
-						<NuxtLink to="/impressum">{{ $t('footer.impressum') }}</NuxtLink>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<ul>
-					<li>
-						<a href="https://www.instagram.com/biancahambusch/" target="_blank" rel="noopener">
-							<img src="/social-media/instagram.png" alt="Instagram" class="social-icon">
-							@biancahambusch
-						</a>
-					</li>
-				</ul>
-			</div>
+
+			<nav class="site-footer__nav" :aria-label="$t('nav.home')">
+				<NuxtLink to="/">{{ $t('nav.home') }}</NuxtLink>
+				<NuxtLink to="/about">{{ $t('nav.about') }}</NuxtLink>
+				<NuxtLink to="/contact">{{ $t('nav.contact') }}</NuxtLink>
+				<NuxtLink to="/impressum">{{ $t('footer.impressum') }}</NuxtLink>
+				<NuxtLink to="/datenschutz">{{ $t('footer.datenschutz') }}</NuxtLink>
+			</nav>
+
+			<a
+				href="https://www.instagram.com/biancahambusch/"
+				target="_blank"
+				rel="noopener"
+				class="site-footer__social"
+				aria-label="Instagram"
+			>
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<rect x="3" y="3" width="18" height="18" rx="5" />
+					<circle cx="12" cy="12" r="4" />
+					<circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+				</svg>
+			</a>
+		</div>
+
+		<div class="site-footer__bar">
+			<span>© {{ year }} Bianca Hambusch</span>
 		</div>
 	</footer>
-	<div id="__by-sailsnake"></div>
 </template>
 
+<script setup>
+const year = new Date().getFullYear()
+</script>
+
 <style lang="scss" scoped>
-.footer_bg {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: $base-color;
-}
-.footer {
-	background-color: $base-color;
-	position: relative;
-	//height: max-content;
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: $spacing5;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	animation: 3s ease 1s forwards appear;
-
-	@keyframes appear {
-		0% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
+	.site-footer {
+		background: #f1ebe3;
+		border-top: 2px solid $base-color;
+		color: $color-text;
 	}
 
-	@include media(xsm) {
-		grid-template-columns: 1fr;
-		gap: $spacing3;
-		padding: $spacing2 0;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	a {
-		display: flex;
+	.site-footer__inner {
+		max-width: 66em;
+		margin-inline: auto;
+		padding: $spacing6 $spacing4;
+		display: grid;
+		grid-template-columns: 1fr auto auto;
 		align-items: center;
-		justify-content: center;
-		color: $white;
-		text-decoration: none;
+		gap: $spacing5;
 
-		&:hover {
-			text-decoration: underline;
+		@include media(xsm) {
+			grid-template-columns: 1fr;
+			justify-items: center;
+			text-align: center;
+			gap: $spacing4;
 		}
 	}
-}
 
-.logo {
-	width: 100%;
-	max-width: 10em;
-	height: auto;
-}
+	.site-footer__brand {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing2;
 
-.social-icon {
-	width: auto;
-	height: 2em;
-	margin: 0 $spacing1;
-}
+		@include media(xsm) {
+			align-items: center;
+		}
+	}
+
+	.site-footer__logo {
+		height: 2.4em;
+		width: auto;
+	}
+
+	.site-footer__tagline {
+		margin: 0;
+		font-family: $font-accent;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		font-size: $font-size7;
+		color: $color-muted;
+	}
+
+	.site-footer__nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $spacing2 $spacing4;
+
+		@include media(xsm) {
+			justify-content: center;
+		}
+
+		a {
+			color: $color-muted;
+			font-family: $font-accent;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+			font-size: $font-size6;
+			text-decoration: none;
+			transition: $transition2;
+
+			@include hover {
+				color: $base-color;
+			}
+		}
+	}
+
+	.site-footer__social {
+		display: inline-flex;
+		color: $color-text;
+		transition: $transition2;
+
+		svg {
+			width: 1.7em;
+			height: 1.7em;
+		}
+
+		@include hover {
+			color: $base-color;
+		}
+	}
+
+	.site-footer__bar {
+		border-top: 1px solid $color-line;
+		padding: $spacing2 $spacing4;
+		text-align: center;
+		font-size: $font-size7;
+		color: $color-muted;
+	}
 </style>

@@ -1,17 +1,18 @@
 <template>
-	<main id="main" class="home">
-		<!-- <NuxtPicture format="avif, webp" src="/images/bianca.jpg" class="hero" /> -->
-		<img  class="hero"/>
-		<div class="hero-overlay">
-			<img src="/images/logos/logo-hero.svg" alt="Bianca Hambusch" class="logo" />
-			<p class="hero-overlay__subtitle">{{ $t('home.subtitle') }}</p>
-			<div class="hero-overlay-actions">
-				<NuxtLink to="/about"><Button>{{ $t('nav.about') }}</Button></NuxtLink>
-				<NuxtLink to="/contact"><Button>{{ $t('home.ctaContact') }}</Button></NuxtLink>
+	<main class="hero">
+		<div class="hero__text">
+			<img src="/images/logos/logo.svg" alt="Bianca Hambusch" class="hero__logo" />
+			<p class="hero__tagline">{{ t('home.tagline') }}</p>
+			<div class="hero__actions">
+				<NuxtLink to="/about"><Button>{{ t('nav.about') }}</Button></NuxtLink>
+				<NuxtLink to="/contact"><Button>{{ t('home.ctaContact') }}</Button></NuxtLink>
 			</div>
 		</div>
-	</main>
 
+		<div class="hero__image">
+			<img src="/images/bianca.jpg" alt="Bianca Hambusch" />
+		</div>
+	</main>
 </template>
 
 <script setup>
@@ -24,70 +25,84 @@ useSeoMeta({
 </script>
 
 <style lang="scss" scoped>
-main {
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	:deep(div) {
-		max-width: 50em;
-	}
-	// assets/scss/mixins
-	@include fade-in;
-}
+	.hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		min-height: 100vh;
 
-.hero {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	//object-fit: cover;
-	//object-position: center;
-	background-image: url("/images/bianca.jpg");
-	background-size: cover;	
-	background-position: center;
-	background-repeat: no-repeat;
-	img {
-		max-width: 100%;
-		height: 100% !important;
-		object-fit: cover;
-		object-position: center;
+		@include media(xsm) {
+			grid-template-columns: 1fr;
+			min-height: 0;
+		}
 	}
-	&-overlay {
-		position: absolute;
-		width: 100%;
-		height: 100%;
+
+	.hero__text {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
-		gap: $spacing3;
-		color: $white;
-		&::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background: linear-gradient(180deg, rgba($black, 0.15) 0%, rgba($black, 0.35) 55%, rgba($black, 0.6) 100%);
-			z-index: 0;
+		gap: $spacing5;
+		padding: $spacing9 clamp($spacing4, 6vw, $spacing8);
+		@include fade-in;
+
+		// dark outline buttons on the light side (override global accent link colour)
+		a {
+			color: $color-text;
 		}
-		> * {
-			position: relative;
-			z-index: 1;
-		}
-		&__subtitle {
-			margin: 0;
-			font-family: $font-accent;
-			text-transform: uppercase;
-			letter-spacing: 0.18em;
-			font-size: $font-size6;
-			color: $white;
-			text-shadow: 0 0 0.4em rgba($black, 0.6);
-		}
-		&-actions {
-			display: flex;
-			flex-direction: column;
+
+		@include media(xsm) {
+			padding: $spacing7 $spacing4;
+			text-align: center;
 			align-items: center;
-			justify-content: center;
-			gap: $spacing1;
 		}
 	}
-}
+
+	.hero__logo {
+		width: min(100%, 24em);
+		height: auto;
+	}
+
+	.hero__tagline {
+		margin: 0;
+		max-width: 14em;
+		font-family: $font-accent;
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		line-height: 1.6;
+		font-size: $font-size5;
+		color: $base-color;
+
+		@include media(xsm) {
+			max-width: 22em;
+		}
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: $spacing3;
+		margin-top: $spacing1;
+
+		@include media(xsm) {
+			justify-content: center;
+		}
+	}
+
+	.hero__image {
+		position: relative;
+		min-height: 100vh;
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center 25%;
+		}
+
+		@include media(xsm) {
+			order: -1;
+			min-height: 56vh;
+		}
+	}
 </style>
