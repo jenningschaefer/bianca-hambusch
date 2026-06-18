@@ -25,19 +25,13 @@ export default defineNuxtConfig({
 												cloudinaryEnvUrl: 'https://res.cloudinary.com/sailsnake-api-test',
 								}
 				},
-				css: [
-								"@/assets/scss/normalize.css",
-								"@/assets/scss/fonts.scss",
-								"@/assets/scss/main.scss",
-								"@/assets/scss/type.scss",
-								"@/assets/scss/forms.scss",
-								"@/assets/scss/cards.scss",
-				],
+				css: ["@/assets/scss/main.scss"],
 				vite: {
 								css: {
 												preprocessorOptions: {
 																scss: {
-																				additionalData: '@import "@/assets/scss/mixins.scss"; @import "@/assets/scss/variables.scss";',
+																				// make variables & mixins available in every component <style> block
+																				additionalData: '@use "@/assets/scss/abstracts" as *;',
 																},
 												},
 								},

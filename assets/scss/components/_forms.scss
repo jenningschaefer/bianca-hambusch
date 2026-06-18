@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 // Resets/ cleanups
 button,
 input,
@@ -63,7 +65,7 @@ fieldset {
     position: relative;
     display: grid;
 	gap: $form-label-height;
-    &* {
+    & * {
         transition: $formTransition;
     }
     label {
