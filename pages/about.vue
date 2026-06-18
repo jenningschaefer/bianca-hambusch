@@ -8,7 +8,7 @@
 <script setup>
 
 const { data: about } = reactive(await useAsyncData("about", () =>
-	queryContent("/pages/about").findOne())
+	queryCollection("pages").path("/pages/about").first())
 );
 
 </script>

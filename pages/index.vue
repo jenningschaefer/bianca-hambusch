@@ -16,7 +16,7 @@
 <script setup>
 
 const { data: home } = reactive(await useAsyncData("home", () =>
-	queryContent("/pages/home").findOne())
+	queryCollection("pages").path("/pages/home").first())
 );
 
 setSeoHead(home.SEOmetaData);
