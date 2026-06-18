@@ -1,32 +1,85 @@
 <template>
 	<main>
-		<h1>contact</h1>
-		<!-- Place the ~/boilerplate__extras/nuxt__components/forms folder in ~/components for use of: -->
-		<FormsBasicInquery />
+		<h1>Kontakt</h1>
+		<ul class="contact-list">
+			<li>
+				<!-- E-Mail wird nur clientseitig zusammengesetzt -> nicht im statischen HTML crawlbar -->
+				<ClientOnly>
+					<a v-if="email" :href="`mailto:${email}`" class="contact-link">
+						<img src="/social-media/google.png" alt="E-Mail" class="contact-link__icon" />
+						<span>{{ email }}</span>
+					</a>
+					<template #fallback>
+						<span class="contact-link contact-link--muted">
+							<img src="/social-media/google.png" alt="E-Mail" class="contact-link__icon" />
+							<span>E-Mail</span>
+						</span>
+					</template>
+				</ClientOnly>
+			</li>
+			<li>
+				<a
+					href="https://www.instagram.com/biancahambusch/"
+					target="_blank"
+					rel="noopener"
+					class="contact-link"
+				>
+					<img src="/social-media/instagram.png" alt="Instagram" class="contact-link__icon" />
+					<span>@biancahambusch</span>
+				</a>
+			</li>
+		</ul>
 	</main>
 </template>
 
-<script setup></script>
+<script setup>
+// E-Mail base64-kodiert ablegen und erst zur Laufzeit dekodieren,
+// damit sie nicht im statischen HTML (und damit von simplen Crawlern) gelesen werden kann.
+const encoded = 'YmlhbmNhaGFtYnVzY2hAZ21haWwuY29t' // -> biancahambusch@gmail.com
+const email = ref('')
+
+onMounted(() => {
+	email.value = atob(encoded)
+})
+</script>
 
 <style lang="scss" scoped>
 	main {
-		background-position: center top;
-		background-size: 100%;
 		display: grid;
 		justify-items: center;
 		align-items: center;
-		@include media(xsm) {
-			display: block;
-		}
-		@include media(sm) {
-			@media screen and (orientation: portrait) {
-				display: block;
-			}
-		}
+		gap: $spacing4;
+		padding: $spacing4 $spacing3;
 	}
-	#basic-inquery {
-		max-width: 35em;
-		padding: $spacing4;
-		border: 3px solid black;
+
+	.contact-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: $spacing3;
+		justify-items: center;
+	}
+
+	.contact-link {
+		display: inline-flex;
+		align-items: center;
+		gap: $spacing2;
+		font-size: $font-size4;
+		color: inherit;
+		text-decoration: none;
+
+		&__icon {
+			height: 1.6em;
+			width: auto;
+		}
+
+		&--muted {
+			opacity: 0.7;
+		}
+
+		@include hover {
+			text-decoration: underline;
+		}
 	}
 </style>
