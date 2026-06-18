@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="about" v-if="about">
     <h1>{{ about.title }}</h1>
-    <span>{{ about.content }}</span>
+    <ContentRenderer :value="about" />
   </main>
 </template>
 
