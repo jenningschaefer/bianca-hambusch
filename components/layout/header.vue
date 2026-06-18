@@ -2,6 +2,7 @@
 	<header id="header" :class="$route.name != 'index' ? 'header--has-bg' : ''">
 		<LayoutLogo />
 		<NavigationMainMenu />
+		<LayoutLocaleToggle />
 	</header>
 </template>
 
@@ -28,7 +29,10 @@
 		padding: $spacing1 0;
 
 		#locale-toggle {
-			display: none;
+			position: absolute;
+			top: $spacing2;
+			left: $spacing2;
+			z-index: 99;
 		}
 	}
 }
@@ -43,6 +47,14 @@
 	grid-row: 1;
 	align-self: center;
 	justify-self: center;
+}
+
+#locale-toggle {
+	grid-column: 3;
+	grid-row: 1;
+	align-self: center;
+	justify-self: end;
+	padding-right: $spacing2;
 }
 
 .header--has-bg {

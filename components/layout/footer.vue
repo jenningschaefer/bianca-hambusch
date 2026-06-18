@@ -9,31 +9,33 @@
 			<div>
 				<ul>
 					<li>
-						<NuxtLink to="/">Home</NuxtLink>
+						<NuxtLink to="/">{{ $t('nav.home') }}</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/about">About Me</NuxtLink>
+						<NuxtLink to="/about">{{ $t('nav.about') }}</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/blog">Blog</NuxtLink>
+						<NuxtLink to="/blog">{{ $t('nav.gallery') }}</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/contact">Contact</NuxtLink>
+						<NuxtLink to="/contact">{{ $t('nav.contact') }}</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/datenschutz">Datenschutz</NuxtLink>
+						<NuxtLink to="/datenschutz">{{ $t('footer.datenschutz') }}</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/impressum">Impressum</NuxtLink>
+						<NuxtLink to="/impressum">{{ $t('footer.impressum') }}</NuxtLink>
 					</li>
 				</ul>
 			</div>
 			<div>
 				<ul>
-					<li><a href=""><img src="/social-media/facebook-f.png" alt="facebook" class="social-icon">
-							biancahambusch</a></li>
-					<li><a href=""><img src="/social-media/instagram.png" alt="instagram" class="social-icon">
-							@biancahambusch</a></li>
+					<li>
+						<a href="https://www.instagram.com/biancahambusch/" target="_blank" rel="noopener">
+							<img src="/social-media/instagram.png" alt="Instagram" class="social-icon">
+							@biancahambusch
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>

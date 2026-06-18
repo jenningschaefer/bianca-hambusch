@@ -1,0 +1,65 @@
+{
+  "_note": "Pendiente: textos en español de 'about' y demás prosa los facilita la clienta. Las claves omitidas usan el alemán como respaldo (fallbackLocale: de).",
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "gallery": "Galería",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "impressum": "Aviso legal",
+    "datenschutz": "Privacidad"
+  },
+  "localeToggle": {
+    "label": "Seleccionar idioma"
+  },
+  "home": {
+    "subtitle": "Historiadora del arte · Etnóloga · Comisaria",
+    "ctaGallery": "Galería",
+    "ctaContact": "Contacto"
+  },
+  "about": {
+    "_todo": "Texto en alemán como respaldo. Reemplazar por la traducción al español.",
+    "title": "Sobre mí",
+    "intro": [
+      "Bianca Hambusch ist Kunsthistorikerin und Ethnologin mit einem Forschungsschwerpunkt auf der Kunst und Architektur zwischen Europa und Lateinamerika um 1900. Im Zentrum ihrer Promotion an der TU Dresden steht die Architektur von Virginio Colombo (1884–1927) in Buenos Aires. Als Kunsthistorikerin und Ethnologin reist sie viel und setzt ihre Cross-Over-Inspirationen in Projekten und im Beruf um.",
+      "Bereits an der Ruprecht-Karls-Universität Heidelberg sowie an Universitäten in Buenos Aires und im spanischen Alicante setzte sie sich mit dem nationalen und internationalen Kunstmarkt und der Präsentation von Kunst in Museen und auf Kunstmessen auseinander. Praktische Erfahrung sammelte sie unter anderem in den Reiss-Engelhorn-Museen Mannheim und bei den Staatlichen Schlössern und Gärten Baden-Württemberg; in den Firmen tms-multimedia und ArtMaks Kulturreisen erweiterte sie ihre Kenntnisse in Administration und Kulturmanagement.",
+      "Seit 2015 kuratiert sie die internationale Kunstmesse MAIN ART und steht dort für Kontinuität und Stabilität – als Jurorin bei der Auswahl der Künstlerinnen und Künstler ebenso wie als Kuratorin der Führungen durch die Ausstellung. Ihr Forschungsschwerpunkt liegt auf der Jugendstil-Architektur; dass die MAIN ART 2022 in einem Jugendstilbau stattfand, freute sie daher besonders."
+    ],
+    "experience": {
+      "heading": "Berufserfahrung",
+      "items": [
+        { "period": "seit 2023", "role": "Sachbearbeiterin Buchhaltung", "org": "Risam Gas", "detail": "" },
+        { "period": "2014–2023", "role": "Kuratorin", "org": "MAIN ART – Internationale Kunstmesse", "detail": "Ausgaben 2015, 2017, 2022 und 2023 – Jurierung der Künstlerinnen und Künstler sowie Führungen durch die Ausstellung." },
+        { "period": "2016–2018", "role": "Volontärin", "org": "Staatliche Schlösser und Gärten Baden-Württemberg", "detail": "Entwicklung, Sammlung und Besucherangebote." },
+        { "period": "2015–2016", "role": "Reisebegleitung", "org": "ArtMaks Kulturreisen", "detail": "Vorbereitung und Begleitung von Kurzreisen weltweit." },
+        { "period": "2011–2016", "role": "Leiterin Verwaltungsabteilung", "org": "tms-multimedia", "detail": "" },
+        { "period": "2012–2015", "role": "Wissenschaftliche Hilfskraft", "org": "Staatliche Schlösser und Gärten Baden-Württemberg", "detail": "Datenbankbetreuung, Textverarbeitung, Inventarisierungs- und Recherchearbeit." },
+        { "period": "2011–2012", "role": "Wissenschaftliche Assistentin", "org": "Kunsthistorisches Institut Heidelberg", "detail": "Seminarbegleitung." },
+        { "period": "2011", "role": "Praktikantin", "org": "Reiss-Engelhorn-Museen", "detail": "Redaktionsarbeit im EU-Projekt DressID sowie Presse- und Marketingarbeit (u. a. Ausstellung „Tschernobyl. Zone – Heimat“)." },
+        { "period": "2008–2010", "role": "Praktika", "org": "Reiss-Engelhorn-Museen und tms-multimedia Mannheim", "detail": "Projektmithilfe, Restaurierung, Inventarisierung sowie verwaltungstechnische Tätigkeiten." }
+      ]
+    },
+    "education": {
+      "heading": "Ausbildung",
+      "items": [
+        { "period": "2013–2023", "title": "Promotion Kunstgeschichte", "org": "TU Dresden", "detail": "Modernität zwischen Europa und Lateinamerika. Die Architektur von Virginio Colombo (1884–1927) in Buenos Aires (Arbeitstitel)." },
+        { "period": "2006–2013", "title": "Magister Kunstgeschichte / Ethnologie", "org": "Ruprecht-Karls-Universität Heidelberg", "detail": "Magisterarbeit: Società Unione Operai Italiani. Die Architektur von Virginio Colombo in der Blütephase von Buenos Aires." },
+        { "period": "2008–2009", "title": "Kunstgeschichte / Ethnologie", "org": "Universidad Nacional de San Martín, Buenos Aires", "detail": "Geschichte Argentiniens, argentinische Kunst und Musik 1850–1950." },
+        { "period": "2008–2009", "title": "Ethnomusikwissenschaft", "org": "Instituto de Investigación en Etnomusicología, Buenos Aires", "detail": "Afro-argentinische Musikgeschichte." },
+        { "period": "2005–2006", "title": "Sprache, Kunst- und Kulturgeschichte", "org": "Universidad de Alicante, Spanien", "detail": "" }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Novedades de Instagram",
+    "empty": "Actualmente no hay publicaciones disponibles.",
+    "follow": "Seguir en Instagram"
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "Para consultas, puede contactarme por correo electrónico o a través de Instagram.",
+    "emailFallback": "Correo electrónico"
+  }
+}

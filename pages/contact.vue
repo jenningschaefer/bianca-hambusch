@@ -1,18 +1,19 @@
 <template>
 	<main>
-		<h1>Kontakt</h1>
+		<h1>{{ $t('contact.title') }}</h1>
+		<p class="contact-intro">{{ $t('contact.intro') }}</p>
 		<ul class="contact-list">
 			<li>
 				<!-- E-Mail wird nur clientseitig zusammengesetzt -> nicht im statischen HTML crawlbar -->
 				<ClientOnly>
 					<a v-if="email" :href="`mailto:${email}`" class="contact-link">
-						<img src="/social-media/google.png" alt="E-Mail" class="contact-link__icon" />
+						<img src="/social-media/google.png" :alt="$t('contact.emailFallback')" class="contact-link__icon" />
 						<span>{{ email }}</span>
 					</a>
 					<template #fallback>
 						<span class="contact-link contact-link--muted">
-							<img src="/social-media/google.png" alt="E-Mail" class="contact-link__icon" />
-							<span>E-Mail</span>
+							<img src="/social-media/google.png" :alt="$t('contact.emailFallback')" class="contact-link__icon" />
+							<span>{{ $t('contact.emailFallback') }}</span>
 						</span>
 					</template>
 				</ClientOnly>
@@ -49,7 +50,14 @@ onMounted(() => {
 		justify-items: center;
 		align-items: center;
 		gap: $spacing4;
-		padding: $spacing4 $spacing3;
+		padding: $spacing8 $spacing3 $spacing7;
+	}
+
+	.contact-intro {
+		margin: 0;
+		max-width: 30em;
+		text-align: center;
+		color: $dark-grey;
 	}
 
 	.contact-list {

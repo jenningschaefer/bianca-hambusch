@@ -9,16 +9,16 @@
 
 			<menu class="main-menu__basic">
 				<NuxtLink to="/" class="menu-item item--home" prefetch>
-					<span>Home</span>
+					<span>{{ $t('nav.home') }}</span>
 				</NuxtLink>
 				<NuxtLink to="/about" class="menu-item" prefetch>
-					<span>About Me</span>
+					<span>{{ $t('nav.about') }}</span>
 				</NuxtLink>
 				<NuxtLink to="/blog" class="menu-item" prefetch>
-					<span>Blog</span>
+					<span>{{ $t('nav.gallery') }}</span>
 				</NuxtLink>
 				<NuxtLink to="/contact" class="menu-item" prefetch>
-					<span>Kontakt</span>
+					<span>{{ $t('nav.contact') }}</span>
 				</NuxtLink>
 			</menu>
 		</nav>
@@ -27,7 +27,6 @@
 
 <script setup>
 
-const links = ["products", "dynamic-fields", "contact"];
 const mobileMenuActive = ref(false);
 const route = useRoute();
 watch(route, () => {

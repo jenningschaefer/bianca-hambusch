@@ -3,10 +3,11 @@
 		<!-- <NuxtPicture format="avif, webp" src="/images/bianca.jpg" class="hero" /> -->
 		<img  class="hero"/>
 		<div class="hero-overlay">
-			<img src="/images/logos/logo-hero.svg" alt="logo" class="logo" />
+			<img src="/images/logos/logo-hero.svg" alt="Bianca Hambusch" class="logo" />
+			<p class="hero-overlay__subtitle">{{ $t('home.subtitle') }}</p>
 			<div class="hero-overlay-actions">
-				<NuxtLink to="/blog"><Button>Blog</Button></NuxtLink>
-				<NuxtLink to="/contact"><Button>Kontakt</Button></NuxtLink>
+				<NuxtLink to="/blog"><Button>{{ $t('home.ctaGallery') }}</Button></NuxtLink>
+				<NuxtLink to="/contact"><Button>{{ $t('home.ctaContact') }}</Button></NuxtLink>
 			</div>
 		</div>
 	</main>
@@ -14,13 +15,12 @@
 </template>
 
 <script setup>
+const { t } = useI18n()
 
-const { data: home } = reactive(await useAsyncData("home", () =>
-	queryCollection("pages").path("/pages/home").first())
-);
-
-setSeoHead(home.SEOmetaData);
-
+useSeoMeta({
+	title: () => `Bianca Hambusch – ${t('home.subtitle')}`,
+	description: () => t('home.subtitle'),
+})
 </script>
 
 <style lang="scss" scoped>
@@ -60,6 +60,15 @@ main {
 		align-items: center;
 		justify-content: center;
 		gap: $spacing3;
+		&__subtitle {
+			margin: 0;
+			font-family: $font-accent;
+			text-transform: uppercase;
+			letter-spacing: 0.18em;
+			font-size: $font-size6;
+			color: $white;
+			text-shadow: 0 0 0.4em rgba($black, 0.6);
+		}
 		&-actions {
 			display: flex;
 			flex-direction: column;
