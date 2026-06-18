@@ -67,7 +67,7 @@ onMounted(() => {
 	.contact {
 		max-width: 40em;
 		margin-inline: auto;
-		padding: $spacing8 $spacing3 $spacing7;
+		padding: $spacing9 $spacing3 $spacing7;
 		text-align: center;
 	}
 

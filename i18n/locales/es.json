@@ -31,7 +31,7 @@
       "heading": "Berufserfahrung",
       "items": [
         { "period": "seit 2023", "role": "Sachbearbeiterin Buchhaltung", "org": "Risam Gas", "detail": "" },
-        { "period": "2014–2023", "role": "Kuratorin", "org": "MAIN ART – Internationale Kunstmesse", "detail": "Ausgaben 2015, 2017, 2022 und 2023 – Jurierung der Künstlerinnen und Künstler sowie Führungen durch die Ausstellung." },
+        { "period": "seit 2014", "role": "Kuratorin", "org": "MAIN ART – Internationale Kunstmesse", "detail": "Ausgaben 2015, 2017, 2022 und 2023 – Jurierung der Künstlerinnen und Künstler sowie Führungen durch die Ausstellung." },
         { "period": "2016–2018", "role": "Volontärin", "org": "Staatliche Schlösser und Gärten Baden-Württemberg", "detail": "Entwicklung, Sammlung und Besucherangebote." },
         { "period": "2015–2016", "role": "Reisebegleitung", "org": "ArtMaks Kulturreisen", "detail": "Vorbereitung und Begleitung von Kurzreisen weltweit." },
         { "period": "2011–2016", "role": "Leiterin Verwaltungsabteilung", "org": "tms-multimedia", "detail": "" },
@@ -44,7 +44,7 @@
     "education": {
       "heading": "Ausbildung",
       "items": [
-        { "period": "2013–2023", "title": "Promotion Kunstgeschichte", "org": "TU Dresden", "detail": "Modernität zwischen Europa und Lateinamerika. Die Architektur von Virginio Colombo (1884–1927) in Buenos Aires (Arbeitstitel)." },
+        { "period": "seit 2013", "title": "Promotion Kunstgeschichte", "org": "TU Dresden", "detail": "Modernität zwischen Europa und Lateinamerika. Die Architektur von Virginio Colombo (1884–1927) in Buenos Aires (Arbeitstitel)." },
         { "period": "2006–2013", "title": "Magister Kunstgeschichte / Ethnologie", "org": "Ruprecht-Karls-Universität Heidelberg", "detail": "Magisterarbeit: Società Unione Operai Italiani. Die Architektur von Virginio Colombo in der Blütephase von Buenos Aires." },
         { "period": "2008–2009", "title": "Kunstgeschichte / Ethnologie", "org": "Universidad Nacional de San Martín, Buenos Aires", "detail": "Geschichte Argentiniens, argentinische Kunst und Musik 1850–1950." },
         { "period": "2008–2009", "title": "Ethnomusikwissenschaft", "org": "Instituto de Investigación en Etnomusicología, Buenos Aires", "detail": "Afro-argentinische Musikgeschichte." },
