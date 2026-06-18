@@ -15,6 +15,8 @@ html {
 	margin: 0;
 	font-size: 15px; // 11pt
 	font-family: $font-main;
+	color: $color-text;
+	background-color: $color-bg;
 	// responsive upscaling for resolutions > 1920px
 	@include media(xlg) {
 		font-size: clamp(15px, 0rem + 0.7813vw, 30px);
@@ -45,12 +47,10 @@ a {
 
 html,
 body {
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
-	//==
 	margin: 0;
 	padding: 0;
-	//==
 	font-family: $font-main;
 }
 

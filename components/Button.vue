@@ -21,85 +21,26 @@
 </script>
 
 <style lang="scss" scoped>
-	// main button styles in "buttons.scss"
-
-	$btn--bgColor: $black;
-	$btn--color: $white;
-	$btn--padding: .5em 3em;
 	.button {
-		$button-padding: 0.4em 1.2em;
 		position: relative;
 		display: inline-block;
-		border: none;
-		margin: 0.5em auto;
-		padding: $btn--padding;
-		background-color: $btn--bgColor;
-		color: $btn--color;
+		margin: 0;
+		padding: 0.7em 2.4em;
+		background-color: transparent;
+		color: currentColor;
+		border: 1.5px solid currentColor;
 		font-family: $font-accent;
 		font-size: $font-size6;
-		//font-weight: bold;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
 		text-decoration: none;
-		text-transform: lowercase;
-		color: $white;
 		cursor: pointer;
-		height: max-content;
-		height: auto;
-		z-index: 3;
-		&.disabled {
-			cursor: not-allowed;
-			&:hover {
-				::after {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					content: "choose an option first";
-					z-index: 3;
-				}
-			}
-		}
-		&.enabled {
-			opacity: 1;
-			pointer-events: all;
-		}
-	}
+		transition: $transition2;
 
-	.button:hover {
 		@include hover {
 			background: $base-color;
-			color: rgba($color: $white, $alpha: 0.9);
-			box-shadow: $shadow1;
+			border-color: $base-color;
+			color: $white;
 		}
-	}
-
-	.button.effect[data-content]::after,
-	.button.effect[data-content]::before {
-		content: attr(data-content);
-		position: absolute;
-		left: 0;
-		top: 0;
-		padding: $btn--padding;
-		opacity: 1;
-		clip-path: polygon(0 0, 0 100%, 100% 100%, 0% 100%);
-	}
-
-	.effect:hover::after,
-	.effect:hover::before {
-		animation: highlight 650ms ease-in;
-	}
-	.button.effect[data-content]::after {
-		z-index: 2;
-		color: $white;
-	}
-
-	.button.effect[data-content]::before {
-		content: attr(data-content);
-		color: transparent;
-		z-index: 1;
-		text-shadow: 0 0 30px $white;
-	}
-
-	.button.effect[data-content]:hover::after {
-		// only works when called like this
-		animation: highlight 650ms linear;
 	}
 </style>

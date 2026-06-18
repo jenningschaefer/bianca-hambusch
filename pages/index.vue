@@ -60,6 +60,18 @@ main {
 		align-items: center;
 		justify-content: center;
 		gap: $spacing3;
+		color: $white;
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(180deg, rgba($black, 0.15) 0%, rgba($black, 0.35) 55%, rgba($black, 0.6) 100%);
+			z-index: 0;
+		}
+		> * {
+			position: relative;
+			z-index: 1;
+		}
 		&__subtitle {
 			margin: 0;
 			font-family: $font-accent;

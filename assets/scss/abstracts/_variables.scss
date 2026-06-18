@@ -5,8 +5,15 @@ $light-grey: #E5E4E2;
 $grey: #A9A9A9;
 $dark-grey: #36454F;
 $black: #1B1212;
-$base-color: #8C6A5D; // use for accents and footer
+$base-color: #8C6A5D; // warm accent (terracotta/taupe)
 $secondary-color: #2E2E2E; // hightlight background
+
+// Semantic editorial palette
+$color-bg: #F7F4EF; // warm off-white page background
+$color-surface: #FFFFFF; // cards / raised surfaces
+$color-text: #211C1A; // near-black body text
+$color-muted: #6E635D; // secondary text
+$color-line: #E4DCD2; // hairlines / borders
 
 // additional (used in form validation)
 $orange: #E2A35C;
@@ -16,10 +23,10 @@ $green: #1a9b20;
 
 
 /* FONTS */
-$font-main: 'Arial';
-$font-accent: 'Oswald';
-$font-art: 'Tiffany';
-$font-decor: 'Typewriter';
+$font-main: 'Axia', 'Helvetica Neue', Arial, sans-serif; // brand body font
+$font-accent: 'Oswald', 'Arial Narrow', sans-serif; // display / headings
+$font-art: 'Tiffany', cursive;
+$font-decor: 'Typewriter', monospace;
 
 
 // sizes

@@ -16,14 +16,7 @@
 	grid-template-rows: 1fr;
 	padding: $spacing2;
 	z-index: 10;
-	&::before {
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 0.1em;
-		top: 100%;
-		background-image: rgba($white, 0.1);
-	}
+	transition: background-color $transition2, backdrop-filter $transition2;
 	@include media(xsm) {
 		display: block;
 		padding: $spacing1 0;
@@ -58,7 +51,9 @@
 }
 
 .header--has-bg {
-	background-color: rgba($white, 0.8);
+	background-color: rgba($color-bg, 0.85);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid $color-line;
 }
 
 </style>
