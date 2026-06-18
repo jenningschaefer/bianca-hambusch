@@ -11,6 +11,11 @@ export default defineNuxtConfig({
 								},
 				},
 				modules: ["@nuxt/image", "@nuxtjs/i18n"],
+				// Galerie (/blog) vorerst deaktiviert -> Direktaufruf leitet auf die Startseite.
+				// Zum Reaktivieren: diese routeRule entfernen + Nav-Links wieder einblenden + Feed-URL setzen.
+				routeRules: {
+								"/blog": { redirect: "/" },
+				},
 				i18n: {
 								bundle: {
 												// empfohlen (vermeidet bekannte Probleme; wird in v10 entfernt)

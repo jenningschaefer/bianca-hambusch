@@ -6,7 +6,7 @@
 			<img src="/images/logos/logo-hero.svg" alt="Bianca Hambusch" class="logo" />
 			<p class="hero-overlay__subtitle">{{ $t('home.subtitle') }}</p>
 			<div class="hero-overlay-actions">
-				<NuxtLink to="/blog"><Button>{{ $t('home.ctaGallery') }}</Button></NuxtLink>
+				<NuxtLink to="/about"><Button>{{ $t('nav.about') }}</Button></NuxtLink>
 				<NuxtLink to="/contact"><Button>{{ $t('home.ctaContact') }}</Button></NuxtLink>
 			</div>
 		</div>

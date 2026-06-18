@@ -14,9 +14,11 @@
 					<li>
 						<NuxtLink to="/about">{{ $t('nav.about') }}</NuxtLink>
 					</li>
+					<!-- Galerie (Instagram) vorerst deaktiviert
 					<li>
 						<NuxtLink to="/blog">{{ $t('nav.gallery') }}</NuxtLink>
 					</li>
+					-->
 					<li>
 						<NuxtLink to="/contact">{{ $t('nav.contact') }}</NuxtLink>
 					</li>

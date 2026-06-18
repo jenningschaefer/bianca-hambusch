@@ -17,25 +17,13 @@
 <style lang="scss" scoped>
 	.company-logo {
 		position: relative;
-		height: 2em; 
-		margin: 1em;
-		padding-bottom: 3em;
-		padding-right: 1em;
+		height: 2.2em;
+		margin: 0;
 		width: max-content;
 		img {
-			position: relative;
-			height: 2em;
+			display: block;
+			height: 2.2em;
 			width: auto;
-		}
-		span {
-			position: absolute;
-			font-size: 0.8em;
-			right: 1em;
-			bottom: 0;
-			transform: translateX(5%);
-			font-style: italic;
-			font-family: $font-art;
-			color: $dark-grey;
 		}
 	}
 </style>

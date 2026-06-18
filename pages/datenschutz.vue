@@ -60,9 +60,9 @@
 		</p>
 		<h3>Instagram (Meta)</h3>
 		<p>
-			Auf der Seite „Galerie“ werden aktuelle Beiträge aus meinem Instagram-Profil eingebunden. Die
-			zugehörigen Bilder werden dabei vom Content-Delivery-Netzwerk von Instagram bzw. Meta
-			geladen; hierbei kann Ihre IP-Adresse an Meta übertragen werden. Weitere Informationen:
+			Diese Website verlinkt auf mein Instagram-Profil. Inhalte von Instagram werden dabei nicht
+			direkt auf der Seite eingebunden – erst wenn Sie einem dieser Links folgen, gelangen Sie zu
+			Instagram bzw. Meta, wo deren eigene Datenschutzbestimmungen gelten. Weitere Informationen:
 			<a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener"
 				>Datenschutzrichtlinie von Instagram</a
 			>.

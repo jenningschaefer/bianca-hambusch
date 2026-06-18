@@ -14,9 +14,11 @@
 				<NuxtLink to="/about" class="menu-item" prefetch>
 					<span>{{ $t('nav.about') }}</span>
 				</NuxtLink>
+				<!-- Galerie (Instagram) vorerst deaktiviert – wieder einblenden, sobald der Feed steht
 				<NuxtLink to="/blog" class="menu-item" prefetch>
 					<span>{{ $t('nav.gallery') }}</span>
 				</NuxtLink>
+				-->
 				<NuxtLink to="/contact" class="menu-item" prefetch>
 					<span>{{ $t('nav.contact') }}</span>
 				</NuxtLink>
