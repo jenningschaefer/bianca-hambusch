@@ -1,14 +1,14 @@
 <template>
   <main id="main" class="datenschutz" v-if="datenschutz">
     <h1>{{ datenschutz.title }}</h1>
-    <ContentRendererMarkdown :value="datenschutz" />
+    <ContentRenderer :value="datenschutz" />
   </main>
 </template>
 
 <script setup>
 
 const { data: datenschutz } = reactive(await useAsyncData("datenschutz", () =>
-	queryContent("/pages/datenschutz").findOne())
+	queryCollection("pages").path("/pages/datenschutz").first())
 );
 
 </script>

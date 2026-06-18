@@ -36,7 +36,7 @@
 	const emit = defineEmits(['payload']);
 
 	const choices = ["een afspraak maken", "een vraag stellen", "terug gebeld worden"];
-	const inputValue = "";
+	const inputValue = ref("");
 
 	function emitData(label) {
 		// if required = true
@@ -45,10 +45,10 @@
 			// then check input validity
 			let isValid = input.checkValidity() === true ? true : false;
 			// and emit all data
-			emit('payload', { fieldLabel: label, fieldValue: inputValue, fieldValidity: isValid });
+			emit('payload', { fieldLabel: label, fieldValue: inputValue.value, fieldValidity: isValid });
 		} else {
 			// or emit only the inputID and inputValue
-			emit('payload', { fieldLabel: label, fieldValue: inputValue });
+			emit('payload', { fieldLabel: label, fieldValue: inputValue.value });
 		}
 	}
 </script>

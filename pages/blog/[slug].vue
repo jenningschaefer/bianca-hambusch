@@ -2,16 +2,14 @@
   <article v-if="post">
     <h1>{{ post.title }}</h1>
     <p><small>{{ post.date }}</small></p>
-    <ContentRendererMarkdown :value="post" />
+    <ContentRenderer :value="post" />
   </article>
 </template>
 
 <script setup>
 const route = useRoute()
 const { data: post } = await useAsyncData(`blog-${route.params.slug}`, () =>
-  queryContent('/blog')
-    .where({ _path: `/blog/${route.params.slug}` })
-    .findOne()
+  queryCollection('blog').path(`/blog/${route.params.slug}`).first()
 )
 </script>
 

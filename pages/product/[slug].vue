@@ -1,5 +1,5 @@
 <template>
-	<main :key="setLocale">
+	<main>
 		<div class="singular-product">
 			<h1>{{ product.title }}</h1>
 			<blockquote>{{ product.description }}</blockquote>
@@ -13,7 +13,7 @@
 const route = useRoute();
 
 const { data: product } = reactive(await useAsyncData("product", () =>
-	queryContent("/products", route.params.slug).findOne())
+	queryCollection("products").path(`/products/${route.params.slug}`).first())
 );
 
 </script>

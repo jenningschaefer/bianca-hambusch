@@ -2,8 +2,8 @@
     <section>
         <h1>Blog</h1>
         <div class="cards--container">
-			<div class="post-card __card" v-for="post in posts" :key="post._path">
-				<NuxtLink :to="post._path">
+			<div class="post-card __card" v-for="post in posts" :key="post.path">
+				<NuxtLink :to="post.path">
 					<img :src="assetUrlBase + post.image" />
 					<h3>
 						{{ post.title }}
@@ -19,7 +19,7 @@
 
 <script setup>
 const { data: posts } = await useAsyncData('blog', () =>
-    queryContent('/blog').sort({ date: -1 }).find()
+    queryCollection('blog').order('date', 'DESC').all()
 )
 const rtc = useRuntimeConfig();
 const cEnv = rtc.public.cloudinaryEnvUrl;

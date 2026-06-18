@@ -1,5 +1,5 @@
 export const useBtnData = (params) => {
-    const { data: buttonData } = useAsyncData("btnData", () => queryContent("/components/buttons").findOne());
+    const { data: buttonData } = useAsyncData("btnData", () => queryCollection("components").path("/components/buttons").first());
     let result = computed(() => {
         if(buttonData.value) {
             return buttonData.value[params]

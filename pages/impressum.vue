@@ -1,14 +1,14 @@
 <template>
   <main id="main" class="impressum" v-if="impressum">
     <h1>{{ impressum.title }}</h1>
-    <ContentRendererMarkdown :value="impressum" />
+    <ContentRenderer :value="impressum" />
   </main>
 </template>
 
 <script setup>
 
 const { data: impressum } = reactive(await useAsyncData("impressum", () =>
-	queryContent("/pages/impressum").findOne())
+	queryCollection("pages").path("/pages/impressum").first())
 );
 
 </script>

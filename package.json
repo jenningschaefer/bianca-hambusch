@@ -9,13 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.8.2",
-    "@nuxt/image": "^1.11.0",
-    "@types/node": "^18",
-    "nuxt": "^3.7.1",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.3.0",
-    "webpack": "^5.84.0"
+    "@nuxt/content": "^3.14.0",
+    "@nuxt/image": "^2.0.0",
+    "@types/node": "^22",
+    "better-sqlite3": "^12.11.1",
+    "nuxt": "^4.4.8",
+    "sass": "^1.62.1"
   },
   "dependencies": {
     "@nuxtjs/cloudinary": "^2.3.4"
