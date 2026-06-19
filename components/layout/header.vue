@@ -19,13 +19,10 @@
 	transition: background-color $transition2, backdrop-filter $transition2;
 	@include media(xsm) {
 		display: block;
-		padding: $spacing1 0;
+		padding: $spacing1 $spacing4;
 
 		#locale-toggle {
-			position: absolute;
-			top: $spacing2;
-			left: $spacing2;
-			z-index: 99;
+			display: none;
 		}
 	}
 }

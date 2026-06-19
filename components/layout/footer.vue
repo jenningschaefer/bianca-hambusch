@@ -68,11 +68,8 @@ const year = new Date().getFullYear()
 	.site-footer__brand {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: $spacing2;
-
-		@include media(xsm) {
-			align-items: center;
-		}
 	}
 
 	.site-footer__logo {
