@@ -17,10 +17,42 @@
 
 <script setup>
 const { t } = useI18n()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
+const title = computed(() => `Bianca Hambusch – ${t('home.subtitle')}`)
+const description = computed(() =>
+	`Bianca Hambusch ist Kunsthistorikerin, Ethnologin und Kuratorin mit Forschungsschwerpunkt auf Kunst und Architektur zwischen Europa und Lateinamerika um 1900.`
+)
 
 useSeoMeta({
-	title: () => `Bianca Hambusch – ${t('home.subtitle')}`,
-	description: () => t('home.subtitle'),
+	title,
+	description,
+	ogTitle: title,
+	ogDescription: description,
+	ogUrl: siteUrl,
+})
+
+useHead({
+	script: [{
+		type: 'application/ld+json',
+		innerHTML: JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Person',
+			name: 'Bianca Hambusch',
+			jobTitle: 'Kunsthistorikerin · Ethnologin · Kuratorin',
+			url: siteUrl,
+			image: `${siteUrl}/images/bianca.jpg`,
+			sameAs: ['https://www.instagram.com/biancahambusch/'],
+			knowsAbout: [
+				'Kunstgeschichte',
+				'Ethnologie',
+				'Jugendstil-Architektur',
+				'Lateinamerikanische Kunst',
+				'Kuratorische Praxis',
+			],
+		}),
+	}],
 })
 </script>
 

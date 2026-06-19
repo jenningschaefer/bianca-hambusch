@@ -37,6 +37,7 @@
 useSeoMeta({
 	title: 'Impressum – Bianca Hambusch',
 	description: 'Rechtliche Angaben zur Website von Bianca Hambusch.',
+	robots: 'noindex, nofollow',
 })
 </script>
 

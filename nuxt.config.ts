@@ -8,6 +8,10 @@ export default defineNuxtConfig({
 												charset: "utf-8",
 												viewport: "width=device-width, initial-scale=1",
 												title: "Bianca Hambusch",
+												meta: [
+																{ name: "author", content: "Bianca Hambusch" },
+																{ name: "theme-color", content: "#F7F4EF" },
+												],
 								},
 				},
 				modules: ["@nuxt/image", "@nuxtjs/i18n"],
@@ -36,6 +40,7 @@ export default defineNuxtConfig({
 				},
 				runtimeConfig: {
 								public: {
+												siteUrl: 'https://bianca-hambusch.de',
 												// set your cloudinary env url (used to built responsive assets links)
 												cloudinaryEnvUrl: 'https://res.cloudinary.com/sailsnake-api-test',
 												// Instagram feed (Behold.so JSON URL) – set via NUXT_PUBLIC_INSTAGRAM_FEED_URL

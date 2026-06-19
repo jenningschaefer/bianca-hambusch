@@ -41,14 +41,24 @@
 
 <script setup>
 const { t, tm, rt } = useI18n()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
 
 const intro = computed(() => tm('about.intro'))
 const experience = computed(() => tm('about.experience.items'))
 const education = computed(() => tm('about.education.items'))
 
+const title = computed(() => `${t('about.title')} – Bianca Hambusch`)
+const description = computed(() =>
+	`Biografie und Forschung von Bianca Hambusch: Promotion an der TU Dresden über die Architektur von Virginio Colombo in Buenos Aires, Kuratorin der MAIN ART.`
+)
+
 useSeoMeta({
-	title: () => `${t('about.title')} – Bianca Hambusch`,
-	description: () => t('home.subtitle'),
+	title,
+	description,
+	ogTitle: title,
+	ogDescription: description,
+	ogUrl: `${siteUrl}/about`,
 })
 </script>
 

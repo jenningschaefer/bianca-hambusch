@@ -122,6 +122,7 @@
 useSeoMeta({
 	title: 'Datenschutz – Bianca Hambusch',
 	description: 'Datenschutzerklärung der Website von Bianca Hambusch.',
+	robots: 'noindex, nofollow',
 })
 </script>
 

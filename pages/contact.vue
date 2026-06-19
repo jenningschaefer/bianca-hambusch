@@ -53,6 +53,23 @@
 </template>
 
 <script setup>
+const { t } = useI18n()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
+const title = computed(() => `${t('contact.title')} – Bianca Hambusch`)
+const description = computed(() =>
+	`Kontakt zu Bianca Hambusch – Kunsthistorikerin, Ethnologin und Kuratorin. Erreichbar per E-Mail oder auf Instagram.`
+)
+
+useSeoMeta({
+	title,
+	description,
+	ogTitle: title,
+	ogDescription: description,
+	ogUrl: `${siteUrl}/contact`,
+})
+
 // E-Mail base64-kodiert ablegen und erst zur Laufzeit dekodieren,
 // damit sie nicht im statischen HTML (und damit von simplen Crawlern) gelesen werden kann.
 const encoded = 'YmlhbmNhaGFtYnVzY2hAZ21haWwuY29t' // -> biancahambusch@gmail.com
